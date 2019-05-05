@@ -5,13 +5,13 @@
 
 int main(int argc, char **argv) {
     // Init ROS
-    ros::init(argc, argv, "Talker");
+    ros::init(argc, argv, "Publisher");
     // NodeHandle
     ros::NodeHandle nh;
     // Create a publisher object
-    ros::Publisher chatter_pub = nh.advertise<std_msgs::String>("chatter", 10000);
+    ros::Publisher chatter_pub = nh.advertise<std_msgs::String>("msg", 1000);
 
-    ros::Rate loop_rate(100);
+    ros::Rate loop_rate(10);
 
     int count = 0;
     while (ros::ok()) {

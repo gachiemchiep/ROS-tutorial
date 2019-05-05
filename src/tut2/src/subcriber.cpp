@@ -13,11 +13,11 @@ void chatterCallbackk(const std_msgs::String::ConstPtr& msg) {
 }
 
 int main(int argc, char **argv) {
-	ros::init(argc, argv, "subcriber");
+	ros::init(argc, argv, "Subcriber");
 
 	ros::NodeHandle nh;
 
-	ros::Subscriber sub = nh.subscribe("chatter", 1000, chatterCallbackk);
+	ros::Subscriber sub = nh.subscribe("msg", 1000, chatterCallbackk);
 
 	ros::spin();
 
