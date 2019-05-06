@@ -1,0 +1,26 @@
+<launch>
+	<group ns="tut4">
+		<node 
+			pkg="tut4"
+			type="tut4_Camera_Node"
+			name="Camera_Node"
+			launch-prefix="xterm -e"		
+		>
+		</node>
+		<node 
+			pkg="tut4"
+			type="tut4_Img_Display_Node"
+			name="Img_Display_Node"
+			launch-prefix="xterm -e"		
+		>
+		</node>
+		<node 
+			pkg="tut4"
+			type="tut4_Img_Process_Node"
+			name="Img_Process_Node"
+			launch-prefix="xterm -e"		
+		>
+		</node>
+		
+	</group>
+</launch>
